@@ -1,3 +1,5 @@
+![Books Scraper → MongoDB](docs/banner.png)
+
 # Books Scraper → MongoDB
 
 Projeto de dados: coleta (web scraping) → camada raw (JSON) → carga em banco NoSQL (MongoDB) → consultas com aggregation pipeline.
