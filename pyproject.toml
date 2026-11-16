@@ -1,0 +1,22 @@
+[project]
+name = "books-scraper-mongo"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Levi7Castro", email = "marcoslevi2014.mll@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "beautifulsoup4>=4.15.0",
+    "lxml>=6.1.3",
+    "pymongo>=4.20.0",
+    "requests>=2.34.2",
+]
+
+[project.scripts]
+books-scraper-mongo = "books_scraper_mongo:main"
+
+[build-system]
+requires = ["uv_build>=0.13.5,<0.14.0"]
+build-backend = "uv_build"
