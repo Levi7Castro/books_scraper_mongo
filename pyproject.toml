@@ -1,7 +1,7 @@
 [project]
 name = "books-scraper-mongo"
 version = "0.1.0"
-description = "Add your description here"
+description = "Scraper de books.toscrape.com com carga no MongoDB orquestrada pelo Airflow"
 readme = "README.md"
 authors = [
     { name = "Levi7Castro", email = "marcoslevi2014.mll@gmail.com" }
@@ -14,9 +14,15 @@ dependencies = [
     "requests>=2.34.2",
 ]
 
-[project.scripts]
-books-scraper-mongo = "books_scraper_mongo:main"
+[dependency-groups]
+dev = [
+    "mongomock",
+    "pytest",
+]
 
-[build-system]
-requires = ["uv_build>=0.13.5,<0.14.0"]
-build-backend = "uv_build"
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
